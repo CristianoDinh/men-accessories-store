@@ -1,0 +1,229 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1536px) {
+    .cart-container {
+        position: relative;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+
+        .cart {
+            margin-top: 100px;
+            display: flex;
+            padding: 60px;
+            justify-content: space-between;
+            background: #EFF3F6;
+
+            .server-error {
+                width: 100%;
+                height: 678px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $font-1;
+                font-weight: 600;
+                font-size: 1.4rem;
+            }
+
+            .empty-list {
+                width: 100%;
+                height: 678px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $font-1;
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+
+            .cart-table {
+                width: 70%;
+                padding: 20px 30px 20px 30px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+                thead {
+                    tr {
+                        display: grid;
+                        grid-template-columns: repeat(12, 1fr);
+                        font-family: $main-font;
+                        padding-bottom: 30px;
+
+                        th {
+                            font-size: 0.9rem;
+                        }
+
+                        th:nth-child(1) {
+                            grid-column: 1 / span 4;
+                            text-align: start;
+                        }
+
+                        th:nth-child(2) {
+                            grid-column: 5 / span 2;
+                            text-align: center;
+
+                        }
+
+                        th:nth-child(3) {
+                            grid-column: 7 / span 2;
+                        }
+
+                        th:nth-child(4) {
+                            grid-column: 9 / span 2;
+                            text-align: center;
+                        }
+
+                        th:nth-child(5) {
+                            grid-column: 11 / span 2;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        display: grid;
+                        grid-template-columns: repeat(12, 1fr);
+                        font-family: $main-font;
+                        align-items: center;
+                        padding: 20px 0;
+                        border-bottom: 1px solid rgba(0, 0, 0, .3);
+
+
+                        td:nth-child(1) {
+                            grid-column: 1 / span 4;
+                            display: flex;
+                            column-gap: 15px;
+
+                            img {
+                                width: 100px;
+                                height: 100px;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+
+                            div {
+                                align-self: center;
+                                display: flex;
+                                flex-direction: column;
+                                row-gap: 5px;
+
+                                p {
+                                    font-size: 0.8rem;
+                                }
+
+                                strong {
+                                    font-size: 1.1rem;
+                                }
+
+                                span {
+                                    font-size: 0.9rem;
+                                }
+                            }
+
+                        }
+
+                        td:nth-child(2) {
+                            grid-column: 5 / span 2;
+                            text-align: center;
+                        }
+
+                        td:nth-child(3) {
+                            grid-column: 7 / span 2;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            column-gap: 20px;
+
+                            p:nth-child(1),
+                            p:nth-child(3) {
+                                font-size: 1.2rem;
+                                padding: 2px 9px;
+                                border: 1px solid black;
+                                border-radius: 10px;
+                                cursor: pointer;
+                            }
+                        }
+
+                        td:nth-child(4) {
+                            grid-column: 9 / span 2;
+                            text-align: center;
+                            font-weight: 600;
+                        }
+
+                        td:nth-child(5) {
+                            grid-column: 11 / span 2;
+                            text-align: center;
+                            font-size: 22px;
+                            color: red;
+                            cursor: pointer;
+                            font-weight: 600;
+                        }
+                    }
+
+                    tr:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+        .checkout {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 30px 20px 30px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            height: fit-content;
+            font-family: $main-font;
+            row-gap: 30px;
+
+            .header {
+                strong {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .main {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+
+                .item {
+                    display: flex;
+                    justify-content: space-between;
+
+                    strong,
+                    p {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .total {
+                    display: flex;
+                    justify-content: space-between;
+
+                    strong {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            a {
+                padding: 10px 20px;
+                width: 100%;
+                text-align: center;
+                border: 1px solid transparent;
+                background: black;
+                color: white;
+                font-size: 0.9rem;
+                transition: .4s;
+            }
+
+            a:hover {
+                border-color: black;
+                background: white;
+                color: black;
+            }
+        }
+    }
+}

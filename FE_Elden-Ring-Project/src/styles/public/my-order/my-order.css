@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1536px) {
+  .customer-order-container {
+    display: flex;
+    position: relative;
+    width: 100vw;
+  }
+  .customer-order-container .customer-order {
+    margin-left: 20%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    font-family: "Poppins", sans-serif;
+    overflow-y: hidden;
+  }
+  .customer-order-container .customer-order .header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .customer-order-container .customer-order .header strong {
+    font-size: 1.4rem;
+  }
+  .customer-order-container .customer-order .header .saved {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .customer-order-container .customer-order .header .saved p {
+    color: #23B870;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .customer-order-container .customer-order .header .saved i {
+    color: #23B870;
+    font-size: 22px;
+    padding-bottom: 3px;
+  }
+  .customer-order-container .customer-order .header .loading {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 7px;
+         column-gap: 7px;
+  }
+  .customer-order-container .customer-order .header .loading p {
+    color: #23B870;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=my-order.css.map */

@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1536px) {
+  .refund-list-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+  }
+  .refund-list-container .loading {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .refund-list-container .server-error {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .refund-list-container .empty-list {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .refund-list-container .utils {
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    justify-content: space-between;
+  }
+  .refund-list-container .utils .item-container {
+    width: 50%;
+    display: flex;
+    padding: 15px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #f5f5f5;
+    border-radius: 10px;
+  }
+  .refund-list-container .utils .item-container .item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 0 20px;
+    border-left: 4px solid black;
+  }
+  .refund-list-container .utils .item-container .item strong {
+    font-size: 1.5rem;
+  }
+  .refund-list-container .utils .item-container .item div {
+    display: flex;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    align-items: center;
+  }
+  .refund-list-container .utils .item-container .item div p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .refund-list-container .refund-table {
+    padding: 30px 0;
+  }
+  .refund-list-container .refund-table thead tr {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .refund-list-container .refund-table thead tr th {
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  .refund-list-container .refund-table thead tr th:nth-child(1) {
+    grid-column: 1/span 2;
+    text-align: start;
+  }
+  .refund-list-container .refund-table thead tr th:nth-child(2) {
+    grid-column: 3/span 2;
+    text-align: start;
+  }
+  .refund-list-container .refund-table thead tr th:nth-child(3) {
+    grid-column: 5/span 5;
+    text-align: start;
+  }
+  .refund-list-container .refund-table thead tr th:nth-child(4) {
+    grid-column: 11/span 1;
+  }
+  .refund-list-container .refund-table thead tr th:nth-child(5) {
+    grid-column: 12/span 2;
+  }
+  .refund-list-container .refund-table tbody tr {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+  .refund-list-container .refund-table tbody tr td {
+    padding: 15px 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .refund-list-container .refund-table tbody tr td:nth-child(1) {
+    grid-column: 1/span 2;
+  }
+  .refund-list-container .refund-table tbody tr td:nth-child(2) {
+    grid-column: 3/span 2;
+  }
+  .refund-list-container .refund-table tbody tr td:nth-child(2) img {
+    width: 70px;
+    height: 70px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .refund-list-container .refund-table tbody tr td:nth-child(3) {
+    grid-column: 5/span 5;
+  }
+  .refund-list-container .refund-table tbody tr td:nth-child(4) {
+    grid-column: 11/span 1;
+    text-align: center;
+  }
+  .refund-list-container .refund-table tbody tr .pending {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 7px;
+         column-gap: 7px;
+  }
+  .refund-list-container .refund-table tbody tr .pending i {
+    font-size: 10px;
+    color: rgb(161, 163, 18);
+  }
+  .refund-list-container .refund-table tbody tr .pending p {
+    color: rgb(161, 163, 18);
+  }
+  .refund-list-container .refund-table tbody tr .success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 7px;
+         column-gap: 7px;
+  }
+  .refund-list-container .refund-table tbody tr .success i {
+    font-size: 10px;
+    color: rgb(30, 163, 18);
+  }
+  .refund-list-container .refund-table tbody tr .success p {
+    color: rgb(30, 163, 18);
+  }
+  .refund-list-container .refund-table tbody tr .reject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 7px;
+         column-gap: 7px;
+  }
+  .refund-list-container .refund-table tbody tr .reject i {
+    font-size: 10px;
+    color: rgb(163, 18, 18);
+  }
+  .refund-list-container .refund-table tbody tr .reject p {
+    color: rgb(163, 18, 18);
+  }
+  .refund-list-container .refund-table tbody tr td:nth-child(5) {
+    grid-column: 12/span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .refund-list-container .refund-table tbody tr td:nth-child(5) i {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 7px;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  .refund-list-container .refund-table tbody tr td:nth-child(5) i:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}/*# sourceMappingURL=refund.css.map */

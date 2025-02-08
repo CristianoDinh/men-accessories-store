@@ -1,0 +1,109 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1536px) {
+    .email-verify-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        position: relative;
+
+        .loading {
+            z-index: 1;
+            background: rgba(0, 0, 0, .7);
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .email-verify {
+            width: 600px;
+            max-height: 700px;
+            background: white;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            font-family: $dashboard-font;
+
+            .email-verify-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 15px;
+
+                h2 {
+                    color: black;
+                    font-size: 1.7rem;
+                }
+
+                p {
+                    text-align: center;
+                    color: black;
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                    font-weight: 300;
+                }
+            }
+
+            form {
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .otp-inputs {
+                    display: flex;
+                    justify-content: center;
+                    gap: 25px;
+                    margin-bottom: 20px;
+
+                    input {
+                        width: 50px;
+                        height: 50px;
+                        font-size: 1.5rem;
+                        text-align: center;
+                        border: 2px solid #ddd;
+                        border-radius: 8px;
+                        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+                    }
+
+                    input:focus {
+                        border-color: black;
+                        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                        outline: none;
+                    }
+
+                    input:hover {
+                        border-color: black;
+                    }
+                }
+
+                .error {
+                    font-size: 0.7rem;
+                    color: red !important;
+                }
+
+                button {
+                    margin-top: 20px;
+                    padding: 12px 100px;
+                    background: black;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    border-radius: 10px;
+                    color: white;
+                    font-family: $dashboard-font;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

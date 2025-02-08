@@ -1,0 +1,117 @@
+@import "../../../global/global.scss";
+
+@media only screen and (max-width: 1536px) {
+    .shop-list-container {
+        width: 100vw;
+        padding: 60px 40px;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 40px;
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 500px;
+        }
+
+        .server-error {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 500px;
+
+            p {
+                font-family: $font-3;
+                font-size: 1.3rem;
+            }
+        }
+
+
+
+        .utils {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+
+            .search {
+                border: 1px solid rgba(0, 0, 0, .4);
+                padding: 0 10px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+
+                i {
+                    font-size: 20px;
+                }
+
+                input {
+                    padding: 10px 0;
+                    width: 90%;
+                    font-family: $main-font;
+                }
+            }
+        }
+
+        .main {
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            position: relative;
+
+            .empty-list {
+                grid-column: 1 / span 3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 500px;
+
+                p {
+                    font-family: $font-3;
+                    font-size: 1.3rem;
+                }
+            }
+
+            .item {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+                font-family: $main-font;
+
+                img {
+                    width: 100%;
+                    height: 450px;
+                    object-fit: cover;
+
+                }
+
+                strong {
+                    font-size: 0.9rem;
+                }
+
+                a {
+                    font-size: 0.8rem;
+                    text-align: center;
+                    padding: 15px 20px;
+                    background: black;
+                    color: white;
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                    transition: .4s;
+                }
+
+                a:hover {
+                    border-color: black;
+                    background: initial;
+                    color: black;
+                }
+            }
+        }
+    }
+}

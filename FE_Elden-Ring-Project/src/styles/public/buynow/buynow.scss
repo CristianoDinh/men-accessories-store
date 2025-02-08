@@ -1,0 +1,199 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1536px) {
+    .buynow-container {
+        width: 100vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .loading {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .buynow {
+            margin-top: 100px;
+            padding: 60px;
+            display: flex;
+            justify-content: space-between;
+            background: #EFF3F6;
+
+            .info-form {
+                padding: 30px 40px 50px 40px;
+                width: 60%;
+                display: flex;
+                height: fit-content;
+                flex-direction: column;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                font-family: $main-font;
+                row-gap: 35px;
+
+                .input-item {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+
+                    label {
+                        font-size: 0.8rem;
+                    }
+
+                    input {
+                        padding: 10px 20px;
+                        font-size: 0.85rem;
+                        border: 1px solid rgba(0, 0, 0, .2);
+                        font-family: $main-font;
+                        transition: .4s;
+                        font-weight: 600;
+                    }
+
+                    input:hover {
+                        border-color: rgba(0, 0, 0, 0.7);
+                    }
+
+                    input:focus {
+                        border-color: black;
+                        outline: none;
+                    }
+                }
+            }
+
+            .summary {
+                width: 35%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                font-family: $main-font;
+                row-gap: 35px;
+                padding: 30px 40px 50px 40px;
+
+                .cart-list {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 30px;
+
+                    .cart-item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .quantity {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            column-gap: 10px;
+
+                            p:nth-child(1),
+                            p:nth-child(3) {
+                                font-size: 1.2rem;
+                                padding: 2px 9px;
+                                border: 1px solid black;
+                                border-radius: 10px;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .main {
+                            display: flex;
+                            column-gap: 15px;
+
+                            img {
+                                width: 60px;
+                                height: 60px;
+                                object-fit: cover;
+                            }
+
+                            div {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+
+                                strong {
+                                    font-size: 0.85rem;
+                                }
+
+                                p {
+                                    font-size: 0.75rem;
+                                }
+
+                                span {
+                                    font-size: 0.85rem;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .total {
+                    display: flex;
+                    flex-direction: column;
+
+                    .subtotal {
+                        padding: 20px 0;
+                        display: flex;
+                        flex-direction: column;
+                        border-top: 1px solid rgba(0, 0, 0, .2);
+                        border-bottom: 1px solid rgba(0, 0, 0, .2);
+                        row-gap: 15px;
+
+                        .item {
+                            display: flex;
+                            justify-content: space-between;
+
+                            p {
+                                color: rgba(0, 0, 0, 0.8);
+                                font-weight: 500;
+                                font-size: 0.85rem;
+                            }
+
+                            strong {
+                                font-size: 0.85rem;
+                            }
+                        }
+                    }
+
+                    .confirm {
+                        padding-top: 20px;
+                        row-gap: 15px;
+                        display: flex;
+                        flex-direction: column;
+
+                        div {
+                            display: flex;
+                            justify-content: space-between;
+
+                            strong {
+                                font-size: 0.9rem;
+                            }
+                        }
+
+                        button {
+                            margin-top: 20px;
+                            padding: 10px 20px;
+                            font-family: $main-font;
+                            background: black;
+                            cursor: pointer;
+                            color: white;
+                            transition: .4s;
+                            border: 1px solid transparent;
+                        }
+
+                        button:hover {
+                            border-color: black;
+                            background: white;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

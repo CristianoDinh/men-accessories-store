@@ -1,0 +1,161 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1536px) {
+    .product-detail-container {
+        position: relative;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+
+        .product-detail {
+            padding: 60px 0;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            column-gap: 60px;
+
+            .product-image {
+                width: 40%;
+                height: 600px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .product-main-info {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                font-family: $main-font;
+
+                span {
+                    font-size: 1rem;
+                }
+
+                strong {
+                    font-size: 1.4rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+
+                .size {
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+
+                    .label {
+                        font-weight: 600;
+                        font-size: 0.9rem;
+                    }
+
+                    .size-list {
+                        display: flex;
+                        column-gap: 30px;
+
+                        .size-item {
+                            label {
+                                padding: 10px 30px;
+                                border: 1px solid black;
+                                transition: .4s;
+                            }
+
+                            .out-of-stock {
+                                background-color: #c0c0c0;
+                                color: #000000;
+                                cursor: not-allowed;
+                                opacity: 0.7;
+                            }
+
+                            input[type="radio"] {
+                                display: none;
+                            }
+
+                            input[type="radio"]:checked+label {
+                                background: black;
+                                color: white;
+                            }
+                        }
+                    }
+
+
+                }
+
+                .buttons {
+                    margin-top: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+
+                    button,
+                    a {
+                        cursor: pointer;
+                        padding: 12px 20px;
+                        border: 1px solid transparent;
+                        background: black;
+                        color: white;
+                        font-family: $main-font;
+                        transition: .4s;
+                    }
+
+                    a {
+                        text-align: center;
+                        font-size: 0.9rem;
+                    }
+
+                    button:hover,
+                    a:hover {
+                        border-color: black;
+                        color: black;
+                        background: white;
+                    }
+                }
+
+                .note {
+                    margin-top: 10px;
+
+                    p {
+                        font-size: 0.85rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .description {
+            padding-bottom: 60px;
+            width: 83%;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            font-family: $main-font;
+
+            .header {
+                display: flex;
+                justify-content: center;
+
+                strong {
+                    font-size: 1.4rem;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid black;
+                }
+            }
+
+            .main {
+                margin-top: 20px;
+
+                p {
+                    line-height: 2.5;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

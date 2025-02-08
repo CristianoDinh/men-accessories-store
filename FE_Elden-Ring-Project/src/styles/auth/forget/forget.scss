@@ -1,0 +1,124 @@
+@import "../../global/global.scss";
+@media only screen and (max-width: 1536px) {
+    .forget-container {
+        display: flex;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        font-family: $main-font;
+
+        .loading {
+            z-index: 1;
+            background: rgba(0, 0, 0, .7);
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .banner {
+            width: 50%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .forget {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            row-gap: 30px;
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 10px;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+                strong {
+                    font-size: 1.1rem;
+                }
+            }
+
+            .forget-form {
+                display: flex;
+                flex-direction: column;
+
+                .input-item {
+                    width: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+
+                    label {
+                        margin-left: 5px;
+                        font-size: 0.8rem;
+                    }
+
+                    input {
+                        padding: 12px 20px;
+                        font-family: $main-font;
+                        background: #F0F0F0;
+                        border-radius: 15px;
+                        transition: .4s;
+                        border: 1px solid transparent;
+                    }
+
+                    input:focus {
+                        border-color: black;
+                    }
+                }
+
+                button {
+                    cursor: pointer;
+                    margin-top: 20px;
+                    padding: 12px 0;
+                    background: black;
+                    color: white;
+                    border-radius: 15px;
+                    font-family: $main-font;
+                    font-weight: 600;
+                }
+            }
+
+            .signin {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 3px;
+
+                p {
+                    font-size: 0.7rem;
+                }
+
+                a {
+                    font-size: 0.7rem;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

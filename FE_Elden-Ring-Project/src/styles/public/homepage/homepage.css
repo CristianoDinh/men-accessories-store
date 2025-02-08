@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.homepage-container {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.homepage-container .homepage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.homepage-container .homepage .homepage-banner {
+  margin-top: 100px;
+  position: relative;
+  width: 100%;
+  height: 678px;
+}
+.homepage-container .homepage .homepage-banner img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage-container .homepage .homepage-banner div {
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.homepage-container .homepage .homepage-banner div strong {
+  color: white;
+  font-size: 3rem;
+  width: 50%;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+.homepage-container .homepage .homepage-banner div a {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Cormorant Garamond", serif;
+  padding: 12px 40px;
+  background: white;
+  font-weight: 600;
+  color: black;
+  border-radius: 10px;
+}
+.homepage-container .homepage .discover {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+}
+.homepage-container .homepage .discover .header {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+.homepage-container .homepage .discover .header p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.homepage-container .homepage .discover .header strong {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.8rem;
+}
+.homepage-container .homepage .discover .carousel-container {
+  margin-bottom: 60px;
+}
+.homepage-container .homepage .discover .carousel-container .carousel-item {
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.homepage-container .homepage .discover .carousel-container .carousel-item p {
+  position: absolute;
+  padding: 10px 30px;
+  background: white;
+  border-radius: 15px;
+  top: 10px;
+  left: 20px;
+}
+.homepage-container .homepage .discover .carousel-container .carousel-item img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage-container .homepage .discover .carousel-container .carousel-item strong {
+  padding-top: 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+}
+.homepage-container .homepage .about {
+  margin-top: 100px;
+  position: relative;
+  width: 100%;
+  height: 778px;
+}
+.homepage-container .homepage .about img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage-container .homepage .about div {
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.homepage-container .homepage .about div strong {
+  color: white;
+  font-size: 3rem;
+  width: 50%;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+.homepage-container .homepage .about div a {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Cormorant Garamond", serif;
+  padding: 12px 40px;
+  background: white;
+  font-weight: 600;
+  color: black;
+  border-radius: 10px;
+}
+.homepage-container .homepage .category {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 60px;
+}
+.homepage-container .homepage .category .category-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.homepage-container .homepage .category .category-list img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage-container .homepage .category .category-list a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.homepage-container .homepage .category .category-list a strong {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.6rem;
+}
+.homepage-container .homepage .category .category-list a div {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Libre Baskerville", serif;
+}
+.homepage-container .homepage .category .category-list a div i {
+  font-size: 22px;
+}
+.homepage-container .homepage .newsletter {
+  margin-top: 100px;
+  position: relative;
+  width: 100%;
+  height: 778px;
+}
+.homepage-container .homepage .newsletter img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage-container .homepage .newsletter .header {
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.homepage-container .homepage .newsletter .header strong {
+  color: white;
+  font-size: 3rem;
+  width: 50%;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+.homepage-container .homepage .newsletter .header div {
+  width: 47%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.homepage-container .homepage .newsletter .header div input {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1rem;
+  color: white;
+  width: 80%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.homepage-container .homepage .newsletter .header div button {
+  padding: 10px 40px;
+  background: white;
+  color: black;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.homepage-container .homepage .blog {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+}
+.homepage-container .homepage .blog .explore {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Cormorant Garamond", serif;
+  row-gap: 50px;
+}
+.homepage-container .homepage .blog .explore strong {
+  width: 50%;
+  font-size: 2.5rem;
+}
+.homepage-container .homepage .blog .explore p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.homepage-container .homepage .blog .explore a {
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 300px;
+  padding: 10px 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: black;
+  color: white;
+}
+.homepage-container .homepage .blog .images {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.homepage-container .homepage .blog .images div {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 20px;
+}
+.homepage-container .homepage .blog .images div img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homepage-container .homepage .blog .images .big-img {
+  width: 70%;
+  height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=homepage.css.map */

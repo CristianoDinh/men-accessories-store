@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1536px) {
+  .login-container {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Lora", serif;
+  }
+  .login-container .loading {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .login-container .banner {
+    width: 50%;
+    height: 100%;
+  }
+  .login-container .banner img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .login-container .login {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    row-gap: 30px;
+  }
+  .login-container .login .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+  .login-container .login .header img {
+    width: 60px;
+    height: 60px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+  }
+  .login-container .login .header strong {
+    font-size: 1.1rem;
+  }
+  .login-container .login .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .login-container .login .login-form .input-item {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .login-container .login .login-form .input-item label {
+    margin-left: 5px;
+    font-size: 0.8rem;
+  }
+  .login-container .login .login-form .input-item input {
+    padding: 12px 20px;
+    font-family: "Lora", serif;
+    background: #F0F0F0;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    transition: 0.4s;
+  }
+  .login-container .login .login-form .input-item input:focus {
+    border-color: black;
+  }
+  .login-container .login .login-form .input-item:nth-child(1) {
+    margin-bottom: 25px;
+  }
+  .login-container .login .login-form .forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .login-container .login .login-form .forget p {
+    margin-left: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.7rem;
+  }
+  .login-container .login .login-form .forget a {
+    text-align: end;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    transition: 0.1s;
+  }
+  .login-container .login .login-form .forget a:hover {
+    text-decoration: underline;
+  }
+  .login-container .login .login-form button {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 12px 0;
+    background: black;
+    color: white;
+    border-radius: 15px;
+    font-family: "Lora", serif;
+    font-weight: 600;
+  }
+  .login-container .login .or {
+    width: 400px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  }
+  .login-container .login .or p {
+    position: absolute;
+    padding: 15px;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    left: 45%;
+    top: -23px;
+    background: #F8F8F8;
+  }
+  .login-container .login .oauth {
+    cursor: pointer;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: center;
+    border: 1px solid black;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    border-radius: 15px;
+  }
+  .login-container .login .oauth i {
+    font-size: 18px;
+  }
+  .login-container .login .oauth p {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .login-container .login .signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 3px;
+         column-gap: 3px;
+  }
+  .login-container .login .signup p {
+    font-size: 0.7rem;
+  }
+  .login-container .login .signup a {
+    font-size: 0.7rem;
+  }
+  .login-container .login .signup a:hover {
+    text-decoration: underline;
+  }
+}/*# sourceMappingURL=login.css.map */

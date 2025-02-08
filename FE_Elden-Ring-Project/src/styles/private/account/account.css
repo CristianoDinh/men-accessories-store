@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1536px) {
+  .account-manager-container {
+    width: 100vw;
+    position: relative;
+    display: flex;
+    font-family: "Afacad Flux", sans-serif;
+    overflow-y: hidden;
+  }
+  .account-manager-container .account-manager {
+    width: calc(100% - 250px);
+    height: 100vh;
+    background: #F9FAFC;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .account-manager-container .account-manager .header {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .account-manager-container .account-manager .header p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .account-manager-container .account-manager .header .my-info {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .account-manager-container .account-manager .header .my-info i {
+    font-size: 36px;
+  }
+  .account-manager-container .account-manager .header .my-info div {
+    display: flex;
+    flex-direction: column;
+  }
+  .account-manager-container .account-manager .header .my-info div strong {
+    font-size: 1rem;
+  }
+  .account-manager-container .account-manager .header .my-info div p {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+}/*# sourceMappingURL=account.css.map */

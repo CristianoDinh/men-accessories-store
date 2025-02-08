@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1536px) {
+  .security-setting-container {
+    display: flex;
+    position: relative;
+    width: 100vw;
+  }
+  .security-setting-container .is-oauth {
+    margin-left: 20%;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .security-setting-container .security-setting {
+    margin-left: 20%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    font-family: "Poppins", sans-serif;
+  }
+  .security-setting-container .security-setting .header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .security-setting-container .security-setting .header strong {
+    font-size: 1.4rem;
+  }
+  .security-setting-container .security-setting .header .saved {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+  .security-setting-container .security-setting .header .saved p {
+    color: #23B870;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .security-setting-container .security-setting .header .saved i {
+    color: #23B870;
+    font-size: 22px;
+    padding-bottom: 3px;
+  }
+  .security-setting-container .security-setting .header .loading {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 7px;
+         column-gap: 7px;
+  }
+  .security-setting-container .security-setting .header .loading p {
+    color: #23B870;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .security-setting-container .security-setting .security-form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    row-gap: 30px;
+  }
+  .security-setting-container .security-setting .security-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .security-setting-container .security-setting .security-form .input-item label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .security-setting-container .security-setting .security-form .input-item input {
+    padding: 12px 20px;
+    font-family: "Poppins", sans-serif;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  .security-setting-container .security-setting .security-form .input-item small {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .security-setting-container .security-setting .security-form button {
+    width: 30%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 2px solid transparent;
+  }
+  .security-setting-container .security-setting .security-form button:hover {
+    border-color: black;
+    background: white;
+    color: black;
+  }
+}/*# sourceMappingURL=security.css.map */

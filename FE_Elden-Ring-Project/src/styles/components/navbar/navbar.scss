@@ -1,0 +1,394 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1536px) {
+    .advance-navbar-close {
+        display: none;
+    }
+
+    .advance-navbar-container {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9;
+        padding: 0 60px;
+        font-family: $main-font;
+        transition: opacity 0.8s, visibility 0.8s;
+    
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
+    
+        &.close {
+            opacity: 0;
+            visibility: hidden;
+        }
+    
+        .advance-navbar {
+            z-index: 10;
+            position: absolute;
+            margin-top: 105px;
+            width: calc(100% - 120px);
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 40px;
+            row-gap: 40px;
+            top: 0;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.8s, transform 0.8s;
+    
+            &.open {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            &.close {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+    
+            .bxs-up-arrow {
+                position: absolute;
+                color: white;
+                font-size: 20px;
+                padding: 10px;
+                background: black;
+                border-radius: 50%;
+                top: 95%;
+                left: 50%;
+                cursor: pointer;
+            }
+    
+            .header {
+                strong {
+                    color: white;
+                }
+            }
+    
+            .menu-list {
+                display: flex;
+                column-gap: 150px;
+    
+                .list {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 40px;
+    
+                    .list-header {
+                        span {
+                            color: rgba(255, 255, 255, 0.7);
+                            font-size: 0.85rem;
+                        }
+                    }
+    
+                    .links {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 35px;
+    
+                        .active {
+                            border-color: rgba(255, 255, 255, 0.6);
+                        }
+    
+                        a {
+                            width: fit-content;
+                            color: white;
+                            font-weight: 600;
+                            font-size: 0.9rem;
+                            padding-bottom: 3px;
+                            border-bottom: 1px solid transparent;
+                            cursor: pointer;
+                            transition: border-color 0.4s;
+                        }
+    
+                        a:hover {
+                            border-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-container {
+        z-index: 11;
+        position: fixed;
+        width: 100vw;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 60px;
+        background: black;
+        font-family: $main-font;
+
+        .navbar {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .main {
+                width: 40%;
+                display: flex;
+                align-items: center;
+                column-gap: 50px;
+
+                i {
+                    padding: 10px;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 22px;
+                }
+
+                a {
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    color: white;
+                    transition: .4s;
+                }
+
+                a:hover,
+                i:hover {
+                    background: rgba(255, 255, 255, .2);
+                }
+            }
+
+            .logo {
+                width: 20%;
+                color: white;
+                text-align: center;
+                font-size: 1.8rem;
+                font-weight: 400;
+                font-family: $spec-font;
+                font-weight: 400;
+                letter-spacing: 2px;
+                cursor: pointer;
+            }
+
+            .my-profile {
+                width: 40%;
+                display: flex;
+                column-gap: 40px;
+                justify-content: end;
+                align-items: center;
+
+                .info {
+                    display: flex;
+                    align-items: center;
+                    padding: 8px 20px;
+                    column-gap: 15px;
+                    background: white;
+                    border-radius: 15px;
+                    cursor: pointer;
+
+                    i {
+                        font-size: 28px;
+                        color: black;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        color: black;
+
+                        strong {
+                            font-size: 0.85rem;
+                        }
+
+                        p {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+
+                .bx-cart {
+                    cursor: pointer;
+                    color: white;
+                    font-size: 24px;
+                }
+
+                .cart-quantity {
+                    position: relative;
+
+                    .bxs-cart {
+                        cursor: pointer;
+                        color: white;
+                        font-size: 24px;
+                    }
+
+                    p {
+                        position: absolute;
+                        font-family: $font-1;
+                        font-size: 0.7rem;
+                        color: black;
+                        background: white;
+                        padding: 2px 6px;
+                        border-radius: 50%;
+                        top: -13px;
+                        left: 27px;
+                    }
+                }
+
+            }
+
+            .auth {
+                width: 40%;
+                display: flex;
+                column-gap: 40px;
+                justify-content: end;
+
+                a {
+                    padding: 10px 30px;
+                    color: white;
+                    border-radius: 10px;
+                }
+
+                a:nth-child(2) {
+                    background: white;
+                    color: black;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .dashnav-container {
+        width: 250px;
+        height: 100vh;
+        max-height: 100vh;
+        overflow-y: hidden;
+        display: flex;
+        padding: 35px 20px;
+        background: $second-backgr;
+        font-family: $dashboard-font;
+
+        .dashnav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .header {
+                padding-bottom: 30px;
+
+                strong {
+                    color: white;
+                    font-size: 22px;
+                    font-weight: 500;
+                }
+            }
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+                margin-bottom: 15px;
+
+                strong {
+                    color: rgba(255, 255, 255, .6);
+                    font-weight: 300;
+                }
+
+                a {
+                    padding: 7px 15px;
+                    display: flex;
+                    column-gap: 15px;
+                    align-items: center;
+                    color: white;
+                    transition: .4s;
+                    border-radius: 8px;
+
+                    i {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-size: 17px;
+                    }
+                }
+
+                a:hover {
+                    background: #2e3035;
+                }
+
+                a.active {
+                    background: #343A46;
+                }
+            }
+        }
+    }
+
+    .setting-nav-container {
+        position: fixed;
+        width: 20%;
+        height: 100vh;
+        overflow-y: hidden;
+        border-right: 1px solid rgba(0, 0, 0, .1);
+        font-family: $font-3;
+
+        .setting-nav {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+
+            h2 {
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+
+            .list {
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+
+                a {
+                    cursor: pointer;
+                    padding: 9px 12px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 15px;
+                    transition: .4s;
+
+                    i {
+                        font-size: 20px;
+                        color: rgba(0, 0, 0, .6);
+
+                    }
+
+                    p {
+                        color: rgba(0, 0, 0, .6);
+                        font-size: 0.9rem;
+
+                    }
+                }
+
+                .active {
+                    background: #d1d2d3;
+
+                    i,
+                    p {
+                        color: black;
+                        font-weight: 600;
+                    }
+                }
+
+                a:hover {
+                    background: #efeff0;
+
+                    i,
+                    p {
+                        color: rgba(0, 0, 0, .8);
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

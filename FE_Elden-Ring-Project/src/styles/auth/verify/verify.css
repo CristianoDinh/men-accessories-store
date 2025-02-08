@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1536px) {
+  .email-verify-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    position: relative;
+  }
+  .email-verify-container .loading {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .email-verify-container .email-verify {
+    width: 600px;
+    max-height: 700px;
+    background: white;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .email-verify-container .email-verify .email-verify-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+  .email-verify-container .email-verify .email-verify-header h2 {
+    color: black;
+    font-size: 1.7rem;
+  }
+  .email-verify-container .email-verify .email-verify-header p {
+    text-align: center;
+    color: black;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+  .email-verify-container .email-verify form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .email-verify-container .email-verify form .otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+  .email-verify-container .email-verify form .otp-inputs input {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .email-verify-container .email-verify form .otp-inputs input:focus {
+    border-color: black;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  .email-verify-container .email-verify form .otp-inputs input:hover {
+    border-color: black;
+  }
+  .email-verify-container .email-verify form .error {
+    font-size: 0.7rem;
+    color: red !important;
+  }
+  .email-verify-container .email-verify form button {
+    margin-top: 20px;
+    padding: 12px 100px;
+    background: black;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    color: white;
+    font-family: "Afacad Flux", sans-serif;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=verify.css.map */

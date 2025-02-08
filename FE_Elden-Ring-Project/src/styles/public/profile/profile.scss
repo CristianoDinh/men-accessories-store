@@ -1,0 +1,111 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1536px) {
+    .profile-setting-container {
+        display: flex;
+        position: relative;
+        width: 100vw;
+
+        .profile-setting {
+            margin-left: 20%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 50px;
+            font-family: $font-3;
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 30px;
+                border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+                strong {
+                    font-size: 1.4rem;
+                }
+
+                .saved {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 5px;
+
+                    p {
+                        color: #23B870;
+                        font-weight: 500;
+                        font-size: 0.9rem;
+                    }
+
+                    i {
+                        color: #23B870;
+                        font-size: 22px;
+                        padding-bottom: 3px;
+                    }
+                }
+
+                .loading {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 7px;
+
+                    p {
+                        color: #23B870;
+                        font-weight: 600;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .info-form {
+                display: flex;
+                flex-direction: column;
+                padding: 30px 0;
+                row-gap: 30px;
+
+                .input-item {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+
+                    label {
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        color: rgba(0, 0, 0, .8);
+                    }
+
+                    input {
+                        padding: 12px 20px;
+                        font-family: $font-3;
+                        border: 2px solid rgba(0, 0, 0, .1);
+                        border-radius: 10px;
+                    }
+
+                    small {
+                        font-size: 0.75rem;
+                        color: rgba(0, 0, 0, .7);
+                    }
+                }
+
+                button {
+                    width: 30%;
+                    text-align: center;
+                    font-family: $font-3;
+                    padding: 12px 20px;
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    background: black;
+                    color: white;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: .4s;
+                    border: 2px solid transparent;
+                }
+
+                button:hover {
+                    border-color: black;
+                    background: white;
+                    color: black;
+                }
+            }
+        }
+    }
+}

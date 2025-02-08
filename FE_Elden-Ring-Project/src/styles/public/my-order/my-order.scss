@@ -1,0 +1,60 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1536px) {
+    .customer-order-container {
+        display: flex;
+        position: relative;
+        width: 100vw;
+
+        .customer-order {
+            margin-left: 20%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 50px;
+            font-family: $font-3;
+            overflow-y: hidden;
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 30px;
+                border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+                strong {
+                    font-size: 1.4rem;
+                }
+
+                .saved {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 5px;
+
+                    p {
+                        color: #23B870;
+                        font-weight: 500;
+                        font-size: 0.9rem;
+                    }
+
+                    i {
+                        color: #23B870;
+                        font-size: 22px;
+                        padding-bottom: 3px;
+                    }
+                }
+
+                .loading {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 7px;
+
+                    p {
+                        color: #23B870;
+                        font-weight: 600;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}

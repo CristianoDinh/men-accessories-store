@@ -1,0 +1,73 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1536px) {
+    .footer-container {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+        background: black;
+
+        .footer {
+            padding: 0 60px;
+            width: 50%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .link-list {
+                display: flex;
+                justify-content: space-between;
+
+                .list {
+                    display: flex;
+                    flex-direction: column;
+                    font-family: $font-2;
+                    row-gap: 40px;
+
+                    strong {
+                        font-size: 1.75rem;
+                        color: white;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 30px;
+
+                        a {
+                            font-size: 1.3rem;
+                            color: white;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+
+            .info {
+                display: flex;
+                justify-content: space-between;
+                font-family: $font-2;
+
+                p {
+                    font-size: 1.3rem;
+                    color: white;
+                }
+            }
+        }
+
+        .image {
+            width: 50%;
+            height: 100%;
+            // position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

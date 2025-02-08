@@ -1,0 +1,2225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1536px) {
+  .add-account-modal-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .add-account-modal-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .add-account-modal-container .add-account-modal {
+    width: 700px;
+    max-height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: #090C0F;
+    padding: 25px 30px;
+  }
+  .add-account-modal-container .add-account-modal .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .add-account-modal-container .add-account-modal .header div {
+    align-items: center;
+    display: flex;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .add-account-modal-container .add-account-modal .header div i {
+    font-size: 24px;
+    color: #3259E8;
+  }
+  .add-account-modal-container .add-account-modal .header div p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+  }
+  .add-account-modal-container .add-account-modal .header i {
+    cursor: pointer;
+    font-size: 26px;
+    color: #606B7A;
+  }
+  .add-account-modal-container .add-account-modal .add-account-form {
+    margin-top: 20px;
+    padding: 25px 20px;
+    background: black;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    overflow-y: hidden;
+  }
+  .add-account-modal-container .add-account-modal .add-account-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .add-account-modal-container .add-account-modal .add-account-form .input-item label {
+    color: white;
+    font-size: 1rem;
+  }
+  .add-account-modal-container .add-account-modal .add-account-form .input-item input {
+    padding: 10px 20px;
+    background: #151A1F;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1rem;
+    color: white;
+    transition: 0.4s;
+  }
+  .add-account-modal-container .add-account-modal .add-account-form .input-item input:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .add-account-modal-container .add-account-modal .add-account-form .input-item small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .add-account-modal-container .add-account-modal .submit {
+    margin: 20px 0;
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .add-account-modal-container .add-account-modal .submit button {
+    cursor: pointer;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: white;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .add-account-modal-container .add-account-modal .submit button:nth-child(1) {
+    width: 30%;
+    background: #22262E;
+  }
+  .add-account-modal-container .add-account-modal .submit button:nth-child(2) {
+    width: 70%;
+    background: #3259E8;
+  }
+  .add-product-modal-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .add-product-modal-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .add-product-modal-container .add-product-modal {
+    width: 700px;
+    max-height: 700px;
+    height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: #090C0F;
+    padding: 25px 30px;
+  }
+  .add-product-modal-container .add-product-modal .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .add-product-modal-container .add-product-modal .header div {
+    align-items: center;
+    display: flex;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .add-product-modal-container .add-product-modal .header div i {
+    font-size: 24px;
+    color: #3259E8;
+  }
+  .add-product-modal-container .add-product-modal .header div p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+  }
+  .add-product-modal-container .add-product-modal .header i {
+    cursor: pointer;
+    font-size: 26px;
+    color: #606B7A;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form {
+    margin-top: 20px;
+    padding: 25px 20px;
+    background: black;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    overflow-y: hidden;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .select-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .select-item label {
+    color: white;
+    font-size: 1rem;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .select-item div {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .select-item div select {
+    width: 100%;
+    padding: 10px 20px;
+    background: #151A1F;
+    color: white;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .select-item div i {
+    font-size: 24px;
+    left: 93%;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .select-item small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-description textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    background: #151A1F;
+    padding: 20px;
+    resize: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.4s;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-description textarea:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-description label {
+    color: white;
+    font-size: 1rem;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-description small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-image {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-image div {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-image div label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.6);
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    cursor: pointer;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-image div label img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-image div label i {
+    font-size: 35px;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-image div label p {
+    font-size: 1.1rem;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-image div input {
+    display: none;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-image small {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-item label {
+    color: white;
+    font-size: 1rem;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-item input {
+    padding: 10px 20px;
+    background: #151A1F;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1rem;
+    color: white;
+    transition: 0.4s;
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-item input:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .add-product-modal-container .add-product-modal .add-product-form .input-item small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .add-product-modal-container .add-product-modal .submit {
+    margin: 20px 0;
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .add-product-modal-container .add-product-modal .submit button {
+    cursor: pointer;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: white;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .add-product-modal-container .add-product-modal .submit button:nth-child(1) {
+    width: 30%;
+    background: #22262E;
+  }
+  .add-product-modal-container .add-product-modal .submit button:nth-child(2) {
+    width: 70%;
+    background: #3259E8;
+  }
+  .add-blog-modal-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .add-blog-modal-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .add-blog-modal-container .add-blog-modal {
+    width: 700px;
+    max-height: 700px;
+    height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: #090C0F;
+    padding: 25px 30px;
+  }
+  .add-blog-modal-container .add-blog-modal .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .add-blog-modal-container .add-blog-modal .header div {
+    align-items: center;
+    display: flex;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .add-blog-modal-container .add-blog-modal .header div i {
+    font-size: 24px;
+    color: #3259E8;
+  }
+  .add-blog-modal-container .add-blog-modal .header div p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+  }
+  .add-blog-modal-container .add-blog-modal .header i {
+    cursor: pointer;
+    font-size: 26px;
+    color: #606B7A;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form {
+    margin-top: 20px;
+    padding: 25px 20px;
+    background: black;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    overflow-y: hidden;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-image {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-image div {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-image div label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.6);
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    cursor: pointer;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-image div label img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-image div label i {
+    font-size: 35px;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-image div label p {
+    font-size: 1.1rem;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-image div input {
+    display: none;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-image small {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-item label {
+    color: white;
+    font-size: 1rem;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-item input {
+    padding: 10px 20px;
+    background: #151A1F;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1rem;
+    color: white;
+    transition: 0.4s;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-item input:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-item small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-content textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    background: #151A1F;
+    padding: 20px;
+    resize: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.4s;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-content textarea:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-content label {
+    color: white;
+    font-size: 1rem;
+  }
+  .add-blog-modal-container .add-blog-modal .add-blog-form .input-content small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .add-blog-modal-container .add-blog-modal .submit {
+    margin: 20px 0;
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .add-blog-modal-container .add-blog-modal .submit button {
+    cursor: pointer;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: white;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .add-blog-modal-container .add-blog-modal .submit button:nth-child(1) {
+    width: 30%;
+    background: #22262E;
+  }
+  .add-blog-modal-container .add-blog-modal .submit button:nth-child(2) {
+    width: 70%;
+    background: #3259E8;
+  }
+  .create-refund-modal-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 25;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .create-refund-modal-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .create-refund-modal-container .create-refund-modal {
+    width: 700px;
+    max-height: 700px;
+    height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: #090C0F;
+    padding: 25px 30px;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .create-refund-modal-container .create-refund-modal .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .create-refund-modal-container .create-refund-modal .header div {
+    align-items: center;
+    display: flex;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .create-refund-modal-container .create-refund-modal .header div i {
+    font-size: 24px;
+    color: #3259E8;
+  }
+  .create-refund-modal-container .create-refund-modal .header div p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+  }
+  .create-refund-modal-container .create-refund-modal .header i {
+    cursor: pointer;
+    font-size: 26px;
+    color: #606B7A;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form {
+    margin-top: 20px;
+    padding: 25px 20px;
+    background: black;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    overflow-y: hidden;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-image {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-image div {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-image div label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.6);
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    cursor: pointer;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-image div label img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-image div label i {
+    font-size: 35px;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-image div label p {
+    font-size: 1.1rem;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-image div input {
+    display: none;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-image small {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-item label {
+    color: white;
+    font-size: 1rem;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-item input {
+    padding: 10px 20px;
+    background: #151A1F;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1rem;
+    color: white;
+    transition: 0.4s;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-item input:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-item small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-content textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    background: #151A1F;
+    padding: 20px;
+    resize: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.4s;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-content textarea:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-content label {
+    color: white;
+    font-size: 1rem;
+  }
+  .create-refund-modal-container .create-refund-modal .create-refund-form .input-content small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .create-refund-modal-container .create-refund-modal .submit {
+    margin: 20px 0;
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .create-refund-modal-container .create-refund-modal .submit button {
+    cursor: pointer;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: white;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .create-refund-modal-container .create-refund-modal .submit button:nth-child(1) {
+    width: 30%;
+    background: #22262E;
+  }
+  .create-refund-modal-container .create-refund-modal .submit button:nth-child(2) {
+    width: 70%;
+    background: #3259E8;
+  }
+  .update-blog-modal-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 22;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .update-blog-modal-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .update-blog-modal-container .update-blog-modal {
+    z-index: 23;
+    width: 700px;
+    max-height: 700px;
+    height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: #090C0F;
+    padding: 25px 30px;
+  }
+  .update-blog-modal-container .update-blog-modal .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .update-blog-modal-container .update-blog-modal .header div {
+    align-items: center;
+    display: flex;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .update-blog-modal-container .update-blog-modal .header div i {
+    font-size: 24px;
+    color: #3259E8;
+  }
+  .update-blog-modal-container .update-blog-modal .header div p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+  }
+  .update-blog-modal-container .update-blog-modal .header i {
+    cursor: pointer;
+    font-size: 26px;
+    color: #606B7A;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form {
+    margin-top: 20px;
+    padding: 25px 20px;
+    background: black;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    overflow-y: hidden;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-image {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-image div {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-image div label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.6);
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    cursor: pointer;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-image div label img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-image div label i {
+    font-size: 35px;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-image div label p {
+    font-size: 1.1rem;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-image div input {
+    display: none;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-image small {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-item label {
+    color: white;
+    font-size: 1rem;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-item input {
+    padding: 10px 20px;
+    background: #151A1F;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1rem;
+    color: white;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-item small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-content textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    background: #151A1F;
+    padding: 20px;
+    resize: none;
+    color: white;
+    font-size: 1rem;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-content label {
+    color: white;
+    font-size: 1rem;
+  }
+  .update-blog-modal-container .update-blog-modal .update-blog-form .input-content small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .update-blog-modal-container .update-blog-modal .submit {
+    margin: 20px 0;
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .update-blog-modal-container .update-blog-modal .submit button {
+    cursor: pointer;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: white;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .update-blog-modal-container .update-blog-modal .submit button:nth-child(1) {
+    width: 30%;
+    background: #22262E;
+  }
+  .update-blog-modal-container .update-blog-modal .submit button:nth-child(2) {
+    width: 70%;
+    background: #3259E8;
+  }
+  .update-product-modal-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .update-product-modal-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .update-product-modal-container .update-product-modal {
+    width: 700px;
+    max-height: 700px;
+    height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: #090C0F;
+    padding: 25px 30px;
+  }
+  .update-product-modal-container .update-product-modal .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .update-product-modal-container .update-product-modal .header div {
+    align-items: center;
+    display: flex;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .update-product-modal-container .update-product-modal .header div i {
+    font-size: 24px;
+    color: #3259E8;
+  }
+  .update-product-modal-container .update-product-modal .header div p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+  }
+  .update-product-modal-container .update-product-modal .header i {
+    cursor: pointer;
+    font-size: 26px;
+    color: #606B7A;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form {
+    margin-top: 20px;
+    padding: 25px 20px;
+    background: black;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    overflow-y: hidden;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-description textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    background: #151A1F;
+    padding: 20px;
+    resize: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.4s;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-description textarea:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-description label {
+    color: white;
+    font-size: 1rem;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-description small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .select-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .select-item label {
+    color: white;
+    font-size: 1rem;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .select-item div {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .select-item div select {
+    width: 100%;
+    padding: 10px 20px;
+    background: #151A1F;
+    color: white;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .select-item div i {
+    font-size: 24px;
+    left: 93%;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .select-item small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-image {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-image div {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    align-self: center;
+    border-radius: 15px;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-image div label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.6);
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    cursor: pointer;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-image div label img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-image div label i {
+    font-size: 35px;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-image div label p {
+    font-size: 1.1rem;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-image div input {
+    display: none;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-image small {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-item label {
+    color: white;
+    font-size: 1rem;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-item input {
+    padding: 10px 20px;
+    background: #151A1F;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1rem;
+    color: white;
+    transition: 0.4s;
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-item input:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .update-product-modal-container .update-product-modal .update-product-form .input-item small {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .update-product-modal-container .update-product-modal .submit {
+    margin: 20px 0;
+    display: flex;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .update-product-modal-container .update-product-modal .submit button {
+    cursor: pointer;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: white;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .update-product-modal-container .update-product-modal .submit button:nth-child(1) {
+    width: 30%;
+    background: #22262E;
+  }
+  .update-product-modal-container .update-product-modal .submit button:nth-child(2) {
+    width: 70%;
+    background: #3259E8;
+  }
+  .del-product-modal-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .del-product-modal-container .del-product-modal {
+    width: 500px;
+    max-height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: #090C0F;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+  .del-product-modal-container .del-product-modal i {
+    color: #FF3F56;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 40px;
+    background: #d1a6ad;
+  }
+  .del-product-modal-container .del-product-modal strong {
+    font-size: 1.6rem;
+    color: white;
+  }
+  .del-product-modal-container .del-product-modal p {
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .del-product-modal-container .del-product-modal span {
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .del-product-modal-container .del-product-modal .button {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .del-product-modal-container .del-product-modal .button button {
+    width: 50%;
+    padding: 12px 0;
+    border-radius: 15px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .del-product-modal-container .del-product-modal .button button:nth-child(1) {
+    background: white;
+    color: black;
+  }
+  .del-product-modal-container .del-product-modal .button button:nth-child(2) {
+    background: #FF3F56;
+    color: white;
+  }
+  .del-blog-modal-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 22;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .del-blog-modal-container .del-blog-modal {
+    z-index: 23;
+    width: 500px;
+    max-height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: #090C0F;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+  .del-blog-modal-container .del-blog-modal i {
+    color: #FF3F56;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 40px;
+    background: #d1a6ad;
+  }
+  .del-blog-modal-container .del-blog-modal strong {
+    font-size: 1.6rem;
+    color: white;
+  }
+  .del-blog-modal-container .del-blog-modal p {
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .del-blog-modal-container .del-blog-modal span {
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .del-blog-modal-container .del-blog-modal .button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .del-blog-modal-container .del-blog-modal .button button {
+    width: 50%;
+    padding: 12px 0;
+    border-radius: 15px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .del-blog-modal-container .del-blog-modal .button button:nth-child(1) {
+    background: white;
+    color: black;
+  }
+  .del-blog-modal-container .del-blog-modal .button button:nth-child(2) {
+    background: #FF3F56;
+    color: white;
+  }
+  .block-account-modal-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .block-account-modal-container .block-account-modal {
+    width: 500px;
+    max-height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: #090C0F;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+  .block-account-modal-container .block-account-modal i {
+    color: #FF3F56;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 40px;
+    background: #d1a6ad;
+  }
+  .block-account-modal-container .block-account-modal strong {
+    font-size: 1.6rem;
+    color: white;
+  }
+  .block-account-modal-container .block-account-modal p {
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .block-account-modal-container .block-account-modal .button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .block-account-modal-container .block-account-modal .button button {
+    width: 50%;
+    padding: 12px 0;
+    border-radius: 15px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .block-account-modal-container .block-account-modal .button button:nth-child(1) {
+    background: white;
+    color: black;
+  }
+  .block-account-modal-container .block-account-modal .button button:nth-child(2) {
+    background: #FF3F56;
+    color: white;
+  }
+  .cancel-order-modal-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 25;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .cancel-order-modal-container .cancel-order-modal {
+    width: 500px;
+    max-height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background: #090C0F;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+  .cancel-order-modal-container .cancel-order-modal i {
+    color: #FF3F56;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 40px;
+    background: #d1a6ad;
+  }
+  .cancel-order-modal-container .cancel-order-modal strong {
+    font-size: 1.6rem;
+    color: white;
+  }
+  .cancel-order-modal-container .cancel-order-modal p {
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .cancel-order-modal-container .cancel-order-modal span {
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .cancel-order-modal-container .cancel-order-modal .button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .cancel-order-modal-container .cancel-order-modal .button button {
+    width: 50%;
+    padding: 12px 0;
+    border-radius: 15px;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .cancel-order-modal-container .cancel-order-modal .button button:nth-child(1) {
+    background: white;
+    color: black;
+  }
+  .cancel-order-modal-container .cancel-order-modal .button button:nth-child(2) {
+    background: #FF3F56;
+    color: white;
+  }
+  .preview-blog-close {
+    display: none;
+  }
+  .preview-blog-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: end;
+  }
+  .preview-blog-container .open {
+    right: 0;
+  }
+  .preview-blog-container .close {
+    right: -600px;
+  }
+  .preview-blog-container .preview-blog-modal {
+    width: 600px;
+    height: 100%;
+    background: #F9FAFC;
+    position: absolute;
+    transition: 0.8s;
+    padding: 30px 40px;
+    z-index: 21;
+    justify-self: end;
+    overflow-y: auto;
+  }
+  .preview-blog-container .preview-blog-modal .loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .preview-blog-container .preview-blog-modal .server-error {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .preview-blog-container .preview-blog-modal .server-error p {
+    font-size: 1.4rem;
+  }
+  .preview-blog-container .preview-blog-modal .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .preview-blog-container .preview-blog-modal .header strong {
+    font-size: 1.5rem;
+  }
+  .preview-blog-container .preview-blog-modal .header i {
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .preview-blog-container .preview-blog-modal .preview {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .preview-blog-container .preview-blog-modal .preview .blog-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Afacad Flux", sans-serif;
+    row-gap: 5px;
+  }
+  .preview-blog-container .preview-blog-modal .preview .blog-header span {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+  }
+  .preview-blog-container .preview-blog-modal .preview .blog-header strong {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .preview-blog-container .preview-blog-modal .preview .blog-header p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .preview-blog-container .preview-blog-modal .preview img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .preview-blog-container .preview-blog-modal .preview .main {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    font-family: "Lora", serif;
+  }
+  .preview-blog-container .preview-blog-modal .preview .main .content {
+    width: 100%;
+  }
+  .preview-blog-container .preview-blog-modal .preview .main .content p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 2rem;
+  }
+  .preview-blog-container .preview-blog-modal .buttons {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .preview-blog-container .preview-blog-modal .buttons button {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    padding: 7px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: 0.4s;
+  }
+  .preview-blog-container .preview-blog-modal .buttons button i {
+    font-size: 20px;
+  }
+  .preview-blog-container .preview-blog-modal .buttons button p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .preview-blog-container .preview-blog-modal .buttons button:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .detail-order-close {
+    display: none;
+  }
+  .detail-order-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: end;
+  }
+  .detail-order-container .open {
+    right: 0;
+  }
+  .detail-order-container .close {
+    right: -600px;
+  }
+  .detail-order-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .detail-order-container .detail-order-modal {
+    width: 600px;
+    height: 100%;
+    background: #F9FAFC;
+    position: absolute;
+    transition: 0.8s;
+    padding: 30px 0;
+    z-index: 21;
+    justify-self: end;
+    overflow-y: auto;
+  }
+  .detail-order-container .detail-order-modal .header {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .detail-order-container .detail-order-modal .header strong {
+    font-size: 1.5rem;
+  }
+  .detail-order-container .detail-order-modal .header i {
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .detail-order-container .detail-order-modal .pending {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(221, 221, 15, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(240, 240, 34, 0.151);
+  }
+  .detail-order-container .detail-order-modal .pending i {
+    font-size: 22px;
+    color: rgba(119, 119, 58, 0.959);
+  }
+  .detail-order-container .detail-order-modal .pending p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-order-container .detail-order-modal .approved {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(32, 221, 15, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(116, 240, 34, 0.151);
+  }
+  .detail-order-container .detail-order-modal .approved i {
+    font-size: 22px;
+    color: rgba(58, 119, 58, 0.959);
+  }
+  .detail-order-container .detail-order-modal .approved p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-order-container .detail-order-modal .rejected {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(221, 15, 15, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(240, 34, 34, 0.151);
+  }
+  .detail-order-container .detail-order-modal .rejected i {
+    font-size: 22px;
+    color: rgba(119, 58, 58, 0.959);
+  }
+  .detail-order-container .detail-order-modal .rejected p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-order-container .detail-order-modal .refunded {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(121, 15, 221, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(113, 34, 240, 0.151);
+  }
+  .detail-order-container .detail-order-modal .refunded i {
+    font-size: 22px;
+    color: rgba(79, 58, 119, 0.959);
+  }
+  .detail-order-container .detail-order-modal .refunded p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-order-container .detail-order-modal .order-infomation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .list {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .detail-order-container .detail-order-modal .order-infomation .list .two-items {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .list .two-items .item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .list .two-items .item p {
+    font-size: 0.85rem;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .list .two-items .item strong {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    row-gap: 20px;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart label {
+    padding: 0 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table {
+    padding: 0 30px;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table thead {
+    width: 100%;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table thead tr {
+    padding: 7px 10px;
+    border-radius: 10px;
+    background: #e4e2e2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table thead tr th {
+    font-size: 0.9rem;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table thead tr th:nth-child(1) {
+    grid-column: 1/span 5;
+    text-align: start;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table thead tr th:nth-child(2) {
+    text-align: start;
+    grid-column: 6/span 2;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table thead tr th:nth-child(3) {
+    text-align: center;
+    grid-column: 8/span 2;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table thead tr th:nth-child(4) {
+    grid-column: 10/span 3;
+    text-align: end;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table tbody {
+    width: 100%;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table tbody tr {
+    padding: 7px 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table tbody tr td {
+    font-size: 0.9rem;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table tbody tr td:nth-child(1) {
+    grid-column: 1/span 5;
+    text-align: start;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table tbody tr td:nth-child(2) {
+    text-align: start;
+    grid-column: 6/span 2;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table tbody tr td:nth-child(3) {
+    text-align: center;
+    grid-column: 8/span 2;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table tbody tr td:nth-child(4) {
+    grid-column: 10/span 3;
+    text-align: end;
+    margin-right: 5px;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table .total {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .detail-order-container .detail-order-modal .order-infomation .order-cart table .total strong:nth-child(2) {
+    margin-right: 5px;
+  }
+  .detail-order-container .detail-order-modal .buttons {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .detail-order-container .detail-order-modal .buttons .marked-success {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: rgba(116, 240, 34, 0.151);
+    color: rgba(58, 119, 58, 0.959);
+    cursor: not-allowed;
+  }
+  .detail-order-container .detail-order-modal .buttons .marked-reject {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: rgba(240, 34, 34, 0.151);
+    color: rgba(119, 58, 58, 0.959);
+    cursor: not-allowed;
+  }
+  .detail-order-container .detail-order-modal .buttons button {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    padding: 7px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: 0.4s;
+  }
+  .detail-order-container .detail-order-modal .buttons button i {
+    font-size: 20px;
+  }
+  .detail-order-container .detail-order-modal .buttons button p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .detail-order-container .detail-order-modal .buttons button:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .detail-refund-close {
+    display: none;
+  }
+  .detail-refund-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: end;
+  }
+  .detail-refund-container .open {
+    right: 0;
+  }
+  .detail-refund-container .close {
+    right: -600px;
+  }
+  .detail-refund-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .detail-refund-container .detail-refund-modal {
+    width: 600px;
+    height: 100%;
+    background: #F9FAFC;
+    position: absolute;
+    transition: 0.8s;
+    padding: 30px 0;
+    z-index: 21;
+    justify-self: end;
+    overflow-y: auto;
+  }
+  .detail-refund-container .detail-refund-modal .header {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .detail-refund-container .detail-refund-modal .header strong {
+    font-size: 1.5rem;
+  }
+  .detail-refund-container .detail-refund-modal .header i {
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .detail-refund-container .detail-refund-modal .pending {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(221, 221, 15, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(240, 240, 34, 0.151);
+  }
+  .detail-refund-container .detail-refund-modal .pending i {
+    font-size: 22px;
+    color: rgba(119, 119, 58, 0.959);
+  }
+  .detail-refund-container .detail-refund-modal .pending p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-refund-container .detail-refund-modal .success {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(56, 221, 15, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(58, 240, 34, 0.151);
+  }
+  .detail-refund-container .detail-refund-modal .success i {
+    font-size: 22px;
+    color: rgba(58, 119, 58, 0.959);
+  }
+  .detail-refund-container .detail-refund-modal .success p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-refund-container .detail-refund-modal .reject {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(221, 15, 15, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(240, 34, 34, 0.151);
+  }
+  .detail-refund-container .detail-refund-modal .reject i {
+    font-size: 22px;
+    color: rgba(119, 58, 58, 0.959);
+  }
+  .detail-refund-container .detail-refund-modal .reject p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-refund-container .detail-refund-modal .refund-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    row-gap: 30px;
+  }
+  .detail-refund-container .detail-refund-modal .refund-info img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .detail-refund-container .detail-refund-modal .refund-info .reason {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .detail-refund-container .detail-refund-modal .refund-info .reason strong {
+    font-size: 1.2rem;
+  }
+  .detail-refund-container .detail-refund-modal .refund-info .reason p {
+    line-height: 2rem;
+  }
+  .detail-refund-container .detail-refund-modal .buttons {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .detail-refund-container .detail-refund-modal .buttons .marked-success {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: rgba(116, 240, 34, 0.151);
+    color: rgba(58, 119, 58, 0.959);
+    cursor: not-allowed;
+  }
+  .detail-refund-container .detail-refund-modal .buttons .marked-reject {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: rgba(240, 34, 34, 0.151);
+    color: rgba(119, 58, 58, 0.959);
+    cursor: not-allowed;
+  }
+  .detail-refund-container .detail-refund-modal .buttons button {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    padding: 7px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: 0.4s;
+  }
+  .detail-refund-container .detail-refund-modal .buttons button i {
+    font-size: 20px;
+  }
+  .detail-refund-container .detail-refund-modal .buttons button p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .detail-refund-container .detail-refund-modal .buttons button:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .detail-myorder-close {
+    display: none;
+  }
+  .detail-myorder-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: end;
+  }
+  .detail-myorder-container .open {
+    right: 0;
+  }
+  .detail-myorder-container .close {
+    right: -600px;
+  }
+  .detail-myorder-container ::-webkit-scrollbar {
+    width: 0;
+  }
+  .detail-myorder-container .detail-myorder-modal {
+    width: 600px;
+    height: 100%;
+    background: #F9FAFC;
+    position: absolute;
+    transition: 0.8s;
+    padding: 30px 0;
+    z-index: 21;
+    justify-self: end;
+    overflow-y: auto;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .detail-myorder-container .detail-myorder-modal .header {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .detail-myorder-container .detail-myorder-modal .header strong {
+    font-size: 1.5rem;
+  }
+  .detail-myorder-container .detail-myorder-modal .header i {
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .detail-myorder-container .detail-myorder-modal .pending {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(221, 221, 15, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(240, 240, 34, 0.151);
+  }
+  .detail-myorder-container .detail-myorder-modal .pending i {
+    font-size: 22px;
+    color: rgba(119, 119, 58, 0.959);
+  }
+  .detail-myorder-container .detail-myorder-modal .pending p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-myorder-container .detail-myorder-modal .approved {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(32, 221, 15, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(116, 240, 34, 0.151);
+  }
+  .detail-myorder-container .detail-myorder-modal .approved i {
+    font-size: 22px;
+    color: rgba(58, 119, 58, 0.959);
+  }
+  .detail-myorder-container .detail-myorder-modal .approved p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-myorder-container .detail-myorder-modal .rejected {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(221, 15, 15, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(240, 34, 34, 0.151);
+  }
+  .detail-myorder-container .detail-myorder-modal .rejected i {
+    font-size: 22px;
+    color: rgba(119, 58, 58, 0.959);
+  }
+  .detail-myorder-container .detail-myorder-modal .rejected p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-myorder-container .detail-myorder-modal .refunded {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(121, 15, 221, 0.644);
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    background: rgba(113, 34, 240, 0.151);
+  }
+  .detail-myorder-container .detail-myorder-modal .refunded i {
+    font-size: 22px;
+    color: rgba(79, 58, 119, 0.959);
+  }
+  .detail-myorder-container .detail-myorder-modal .refunded p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .list {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .list .two-items {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .list .two-items .item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .list .two-items .item p {
+    font-size: 0.85rem;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .list .two-items .item strong {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    row-gap: 20px;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart label {
+    padding: 0 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table {
+    padding: 0 30px;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table thead {
+    width: 100%;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table thead tr {
+    padding: 7px 10px;
+    border-radius: 10px;
+    background: #e4e2e2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table thead tr th {
+    font-size: 0.9rem;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table thead tr th:nth-child(1) {
+    grid-column: 1/span 5;
+    text-align: start;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table thead tr th:nth-child(2) {
+    text-align: start;
+    grid-column: 6/span 2;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table thead tr th:nth-child(3) {
+    text-align: center;
+    grid-column: 8/span 2;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table thead tr th:nth-child(4) {
+    grid-column: 10/span 3;
+    text-align: end;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table tbody {
+    width: 100%;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table tbody tr {
+    padding: 7px 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table tbody tr td {
+    font-size: 0.9rem;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table tbody tr td:nth-child(1) {
+    grid-column: 1/span 5;
+    text-align: start;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table tbody tr td:nth-child(2) {
+    text-align: start;
+    grid-column: 6/span 2;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table tbody tr td:nth-child(3) {
+    text-align: center;
+    grid-column: 8/span 2;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table tbody tr td:nth-child(4) {
+    grid-column: 10/span 3;
+    text-align: end;
+    margin-right: 5px;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table .total {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .detail-myorder-container .detail-myorder-modal .myorder-infomation .myorder-cart table .total strong:nth-child(2) {
+    margin-right: 5px;
+  }
+  .detail-myorder-container .detail-myorder-modal .buttons {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .detail-myorder-container .detail-myorder-modal .buttons .note {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .detail-myorder-container .detail-myorder-modal .buttons button {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.4s;
+    font-family: "Afacad Flux", sans-serif;
+    background: red;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .detail-myorder-container .detail-myorder-modal .buttons button:hover {
+    opacity: 0.7;
+  }
+}/*# sourceMappingURL=modal.css.map */

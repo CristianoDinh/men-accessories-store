@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+$border-test: 1px solid lime;
+$main-font: "Lora", serif;
+$dashboard-font: "Afacad Flux", sans-serif;
+$spec-font: "Bodoni Moda", serif;
+$font-1: "Libre Baskerville", serif;
+$font-2: "Cormorant Garamond", serif;
+$font-3: "Poppins", sans-serif;
+$main-backgr: #F9FAFC;
+$second-backgr: #111926

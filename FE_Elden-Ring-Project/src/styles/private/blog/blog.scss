@@ -1,0 +1,56 @@
+@import "../../global/global.scss";
+
+@media only screen and (max-width: 1536px) {
+    .blog-manager-container {
+        width: 100vw;
+        position: relative;
+        display: flex;
+        font-family: $dashboard-font;
+        overflow-y: hidden;
+
+        .blog-manager {
+            width: calc(100% - 250px);
+            height: 100vh;
+            background: $main-backgr;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+
+            .header {
+                padding: 30px 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+
+                .my-info {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+
+                    i {
+                        font-size: 36px;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+
+                        strong {
+                            font-size: 1rem;
+                        }
+
+                        p {
+                            font-size: 0.9rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

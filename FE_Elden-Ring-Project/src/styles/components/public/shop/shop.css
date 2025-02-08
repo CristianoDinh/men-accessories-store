@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1536px) {
+  .shop-list-container {
+    width: 100vw;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+  .shop-list-container .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+  }
+  .shop-list-container .server-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+  }
+  .shop-list-container .server-error p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+  }
+  .shop-list-container .utils {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-list-container .utils .search {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 0 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .shop-list-container .utils .search i {
+    font-size: 20px;
+  }
+  .shop-list-container .utils .search input {
+    padding: 10px 0;
+    width: 90%;
+    font-family: "Lora", serif;
+  }
+  .shop-list-container .main {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: relative;
+  }
+  .shop-list-container .main .empty-list {
+    grid-column: 1/span 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+  }
+  .shop-list-container .main .empty-list p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+  }
+  .shop-list-container .main .item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    font-family: "Lora", serif;
+  }
+  .shop-list-container .main .item img {
+    width: 100%;
+    height: 450px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .shop-list-container .main .item strong {
+    font-size: 0.9rem;
+  }
+  .shop-list-container .main .item a {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 15px 20px;
+    background: black;
+    color: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .shop-list-container .main .item a:hover {
+    border-color: black;
+    background: initial;
+    color: black;
+  }
+}/*# sourceMappingURL=shop.css.map */
